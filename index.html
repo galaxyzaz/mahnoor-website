@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahnoor Sultan — Architecture d'intérieur &amp; 3D photoréaliste</title>
+<meta name="description" content="Architecture d'intérieur et visualisation 3D photoréaliste. Villas, majlis et penthouses modélisés sous SketchUp et rendus avant le premier coup de pioche. Lyon, Paris, Doha, Dubaï, Lahore.">
+<meta property="og:title" content="Mahnoor Sultan — Architecture d'intérieur & 3D photoréaliste">
+<meta property="og:description" content="Voyez votre villa terminée avant que les travaux commencent.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F5F1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F7F5F1'/%3E%3Cpath d='M32 12 L52 32 L32 52 L12 32 Z' fill='none' stroke='%2396703C' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='8' fill='none' stroke='%2396703C' stroke-width='2'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService",
+"name":"Mahnoor Sultan — Studio d'architecture d'intérieur",
+"description":"Architecture d'intérieur et visualisation 3D photoréaliste. Villas, majlis et penthouses modélisés sous SketchUp et rendus avant construction.",
+"areaServed":["France","Qatar","Émirats arabes unis","Arabie saoudite","Pakistan"],
+"address":{"@type":"PostalAddress","addressLocality":"Lyon","addressCountry":"FR"},
+"knowsLanguage":["fr","en","ur","pa"],
+"telephone":"+33650081275",
+"serviceType":["Architecture d'intérieur","Visualisation 3D","Aménagement clé en main"],
+"priceRange":"$$$"}
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SITE BILINGUE — le français est écrit dans le HTML, l'anglais est
+     stocké dans les attributs data-en. Le bouton FR/EN permute les deux.
+     Pour corriger un texte, modifiez les DEUX : le contenu et le data-en.
+
+     IMAGES déjà intégrées : salle de bain (rendu + modèle), salon
+     (rendu + modèle), portrait. Chercher « IMAGE ▸ » pour les remplacer.
+
+     À PERSONNALISER : studio@example.com, mahnoor.interiors
+     Téléphone +33 6 50 08 12 75 déjà en place.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@200;300;400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F7F5F1; --snow:#FFFFFF; --stone:#EBE5DA;
+  --ink:#15130F; --ink-soft:#4E4A42; --ink-faint:#8B8579;
+  --bronze:#96703C; --rule:rgba(21,19,15,.13);
+  --display:"Bodoni Moda",Didot,Georgia,serif;
+  --body:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --lattice:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%2396703C' stroke-width='1' opacity='0.22'%3E%3Cpath d='M32 0 L64 32 L32 64 L0 32 Z'/%3E%3Cpath d='M0 0 L64 64 M64 0 L0 64'/%3E%3Ccircle cx='32' cy='32' r='13'/%3E%3Cpath d='M0 32H64M32 0V64'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-weight:300;
+  font-size:17px;line-height:1.72;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 26px}
+.narrow{max-width:740px}
+.mono{font-family:var(--mono);font-size:.63rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.5rem,8vw,5.2rem);line-height:1.04;letter-spacing:-.015em}
+h1 em{font-style:italic;color:var(--bronze)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.95rem,5.6vw,3.3rem);line-height:1.1;letter-spacing:-.01em;margin:.8rem 0 1.5rem}
+h3{font-family:var(--body);font-weight:400;font-size:1.2rem}
+p{max-width:60ch;color:var(--ink-soft)}
+p.lead{color:var(--ink);font-size:1.06rem}
+section{padding:clamp(72px,10vw,128px) 0;border-top:1px solid var(--rule)}
+.tinted{background:var(--stone);border-top:0}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .85s ease,transform .85s ease}
+.reveal.seen{opacity:1;transform:none}
+
+/* ════════ RIDEAU D'OUVERTURE ════════ */
+#curtain{
+  position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;
+  background:transparent;pointer-events:none;
+}
+#curtain .panel{position:absolute;left:0;right:0;height:50.2%;background:var(--paper)}
+#curtain .panel.top{top:0;animation:cTop 1.15s cubic-bezier(.76,0,.24,1) 1.45s forwards}
+#curtain .panel.bot{bottom:0;animation:cBot 1.15s cubic-bezier(.76,0,.24,1) 1.45s forwards}
+@keyframes cTop{to{transform:translateY(-100%)}}
+@keyframes cBot{to{transform:translateY(100%)}}
+#curtain .mark{position:relative;z-index:2;text-align:center;padding:0 24px}
+#curtain .mark .eyebrow{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--bronze);opacity:0;animation:cFade .8s ease .25s forwards;
+}
+#curtain .mark .name{overflow:hidden;margin-top:14px}
+#curtain .mark .name span{
+  display:block;font-family:var(--display);font-weight:400;
+  font-size:clamp(2rem,7vw,3.6rem);letter-spacing:.02em;line-height:1.1;
+  transform:translateY(110%);animation:cRise 1.05s cubic-bezier(.22,.75,.28,1) .35s forwards;
+}
+#curtain .mark .bar{
+  width:0;height:1px;background:var(--bronze);margin:26px auto 0;
+  animation:cBar .9s cubic-bezier(.65,0,.35,1) 1.05s forwards;
+}
+@keyframes cFade{to{opacity:1}}
+@keyframes cRise{to{transform:none}}
+@keyframes cBar{to{width:170px}}
+#curtain .mark{animation:cOut .4s ease 1.4s forwards}
+@keyframes cOut{to{opacity:0}}
+
+/* ════════ EN-TÊTE ════════ */
+.sticky{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,245,241,.93);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+  transform:translateY(-102%);transition:transform .4s ease}
+.sticky.on{transform:none}
+.sticky .inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:13px 0}
+.sticky .name{font-family:var(--display);font-size:1rem;letter-spacing:.04em}
+.sticky nav{display:none;gap:24px}
+.sticky nav a{font-family:var(--mono);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.sticky nav a:hover{color:var(--bronze)}
+.sticky .mini{font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;
+  border:1px solid var(--ink);color:var(--ink);padding:9px 15px;transition:background .3s,color .3s}
+.sticky .mini:hover{background:var(--ink);color:var(--paper)}
+
+/* ════════ SÉLECTEUR DE LANGUE ════════ */
+.lang{display:inline-flex;align-items:center;gap:0;border:1px solid var(--rule);flex:0 0 auto}
+.lang button{
+  font-family:var(--mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;
+  background:transparent;border:0;color:var(--ink-faint);padding:8px 11px;cursor:pointer;
+  transition:background .25s ease,color .25s ease;
+}
+.lang button.on{background:var(--ink);color:var(--paper)}
+.lang button:not(.on):hover{color:var(--ink)}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:var(--paper);
+  padding:12px 18px;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}
+.skip:focus{left:0}
+
+/* ════════ ACCUEIL PLEIN ÉCRAN ════════ */
+.hero{position:relative;min-height:94svh;min-height:94vh;display:flex;flex-direction:column;
+  justify-content:space-between;overflow:hidden;border:0;padding:0}
+.hero-media{position:absolute;inset:0;z-index:0;background:var(--ink)}
+.slide{position:absolute;inset:0;opacity:0;will-change:opacity}
+.slide img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+.s1{animation:fadeA 19s ease-in-out 1.35s infinite}
+.s2{animation:fadeB 19s ease-in-out 1.35s infinite}
+.s1 img{animation:kbA 19s ease-in-out 1.35s infinite}
+.s2 img{animation:kbB 19s ease-in-out 1.35s infinite}
+@keyframes fadeA{0%{opacity:1}44%{opacity:1}53%{opacity:0}95%{opacity:0}100%{opacity:1}}
+@keyframes fadeB{0%{opacity:0}44%{opacity:0}53%{opacity:1}95%{opacity:1}100%{opacity:0}}
+@keyframes kbA{0%{transform:scale(1.02)}50%{transform:scale(1.13)}100%{transform:scale(1.02)}}
+@keyframes kbB{0%{transform:scale(1.13)}50%{transform:scale(1.02)}100%{transform:scale(1.13)}}
+.hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(18,16,13,.88) 0%,rgba(18,16,13,.44) 34%,
+             rgba(18,16,13,.10) 58%,rgba(18,16,13,.62) 100%)}
+
+.topbar{position:relative;z-index:3;padding:26px 0 0;color:var(--paper)}
+.topbar .inner{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+.brand{font-family:var(--display);font-size:1.16rem;letter-spacing:.05em}
+.brand span{display:block;font-family:var(--mono);font-size:.52rem;letter-spacing:.28em;
+  color:#C6A87A;margin-top:4px}
+.topright{display:flex;align-items:center;gap:24px}
+.topnav{display:none;gap:24px;padding-top:4px}
+.topnav a{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.74);transition:color .3s}
+.topnav a:hover{color:#C6A87A}
+.topbar .lang{border-color:rgba(255,255,255,.34)}
+.topbar .lang button{color:rgba(255,255,255,.7)}
+.topbar .lang button.on{background:var(--paper);color:var(--ink)}
+.topbar .lang button:not(.on):hover{color:#fff}
+
+.hero-copy{position:relative;z-index:3;padding-bottom:clamp(44px,6vw,80px)}
+.hero-copy .mono{color:#C6A87A}
+.hero h1{margin:1rem 0 0;max-width:15ch;color:var(--paper)}
+.hero h1 em{color:#C6A87A}
+.hero .lede{margin-top:1.4rem;max-width:44ch;font-size:clamp(1rem,3.1vw,1.14rem);
+  line-height:1.6;color:rgba(255,255,255,.82)}
+.markets{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:1.4rem;list-style:none}
+.markets li{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.55)}
+.markets li::before{content:"— ";color:#C6A87A}
+.cta{display:inline-flex;align-items:center;gap:12px;padding:18px 32px;background:var(--ink);
+  color:var(--paper);font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;
+  text-transform:uppercase;transition:background .35s}
+.cta:hover{background:var(--bronze)}
+.hero .cta{margin-top:1.9rem;background:var(--paper);color:var(--ink)}
+.hero .cta:hover{background:#C6A87A;color:var(--ink)}
+.hero-cap{position:relative;z-index:3;height:0}
+.hero-cap span{position:absolute;right:26px;bottom:6px;opacity:0;
+  font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);text-align:right}
+.hero-cap .c1{animation:fadeA 19s ease-in-out 1.35s infinite}
+.hero-cap .c2{animation:fadeB 19s ease-in-out 1.35s infinite}
+
+.rise{opacity:0;transform:translateY(16px);animation:riseUp .9s cubic-bezier(.22,.75,.28,1) forwards}
+.r1{animation-delay:1.55s} .r2{animation-delay:1.70s} .r3{animation-delay:1.90s}
+.r4{animation-delay:2.05s} .r5{animation-delay:2.20s}
+@keyframes riseUp{to{opacity:1;transform:none}}
+
+/* ════════ COMPARATEUR ════════ */
+.proof-grid{display:grid;gap:34px;grid-template-columns:1fr;align-items:center;margin-top:2.2rem}
+.compare{position:relative;aspect-ratio:2/3;overflow:hidden;background:var(--stone);
+  border:1px solid var(--rule);--pos:52%;touch-action:pan-y}
+.compare.tall{aspect-ratio:1176/1338}
+.compare .layer{position:absolute;inset:0}
+.compare .layer img{width:100%;height:100%;object-fit:cover;display:block}
+.compare .layer.before{clip-path:inset(0 calc(100% - var(--pos)) 0 0);background:var(--snow)}
+.handle{position:absolute;top:0;bottom:0;left:var(--pos);width:1px;background:rgba(255,255,255,.9);pointer-events:none;z-index:3}
+.handle::after{content:"";position:absolute;top:50%;left:50%;width:62px;height:62px;margin:-31px 0 0 -31px;
+  border-radius:50%;background:var(--snow);box-shadow:0 6px 24px rgba(21,19,15,.24)}
+.handle::before{content:"‹  ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  font-family:var(--body);font-size:1.2rem;letter-spacing:.06em;color:var(--ink);line-height:1}
+.range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
+.tag{position:absolute;bottom:18px;z-index:2;font-family:var(--body);font-size:.8rem;padding:9px 18px;border-radius:3px;
+  background:var(--snow);color:var(--ink);box-shadow:0 4px 16px rgba(21,19,15,.18)}
+.tag.l{left:18px} .tag.r{right:18px}
+.hint{margin-top:16px;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.6rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+.hint i{display:block;width:34px;height:1px;background:var(--rule)}
+
+/* ════════ LIGNES ════════ */
+.rows{margin-top:2.6rem;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:1fr;gap:.4rem;padding:27px 0;border-bottom:1px solid var(--rule);
+  transition:padding-left .35s ease}
+.row:hover{padding-left:12px}
+.row .idx{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--bronze)}
+.row .head{display:flex;align-items:baseline;gap:14px}
+.row p{font-size:.96rem;max-width:56ch}
+
+/* ════════ STUDIO ════════ */
+.founder{display:grid;gap:34px;grid-template-columns:1fr;align-items:center;margin-top:1rem}
+.portrait{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--stone) var(--lattice);
+  border:1px solid var(--rule)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.signature{font-family:var(--display);font-style:italic;font-size:1.6rem;color:var(--bronze);margin-top:1.8rem}
+.credentials{margin-top:1.8rem;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.credentials div{background:var(--paper);padding:16px 18px}
+.credentials .k{font-family:var(--mono);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);display:block}
+.credentials .v{font-size:.95rem;margin-top:2px}
+
+/* ════════ NIVEAUX ════════ */
+.deliver{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2.6rem}
+.deliver .col{background:var(--paper);padding:34px 26px 36px}
+.deliver .col .kind{font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
+.deliver .col h3{margin:.7rem 0 .3rem;font-family:var(--display);font-size:1.65rem}
+.deliver .col .note{font-size:.9rem;margin-bottom:1.3rem}
+.deliver ul{list-style:none;display:grid;gap:9px}
+.deliver li{font-size:.93rem;color:var(--ink-soft);padding-left:18px;position:relative;line-height:1.5}
+.deliver li::before{content:"—";position:absolute;left:0;color:var(--bronze)}
+
+/* ════════ CARROUSEL ════════ */
+.carousel{position:relative;margin-top:2.6rem}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  scrollbar-width:none;-ms-overflow-style:none;padding-bottom:2px}
+.track::-webkit-scrollbar{display:none}
+.frame{position:relative;overflow:hidden;cursor:zoom-in;background:var(--stone);border:1px solid var(--rule);
+  flex:0 0 88%;scroll-snap-align:center;aspect-ratio:4/5}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.frame:hover img{transform:scale(1.04)}
+.frame .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:14px 16px;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(4px);
+  font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.navbtn{display:none;position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:52px;height:52px;
+  border-radius:50%;cursor:pointer;background:var(--snow);border:1px solid var(--rule);color:var(--ink);
+  font-size:1.05rem;line-height:1;box-shadow:0 6px 22px rgba(21,19,15,.14);transition:background .3s,color .3s}
+.navbtn:hover{background:var(--ink);color:var(--paper)}
+.navbtn.prev{left:-16px} .navbtn.next{right:-16px}
+.dots{display:flex;gap:9px;justify-content:center;margin-top:20px}
+.dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(21,19,15,.2);cursor:pointer;transition:background .3s}
+.dot.on{background:var(--bronze)}
+
+/* ════════ RÉALISATIONS ════════ */
+.built{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:2.6rem}
+.built figure{position:relative;overflow:hidden;aspect-ratio:2/3;background:var(--stone);
+  border:1px solid var(--rule);cursor:zoom-in;margin:0}
+.built figure.wide{grid-column:span 2;aspect-ratio:3/2}
+.built img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.built figure:hover img{transform:scale(1.04)}
+.built figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:13px 15px;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(4px);
+  font-family:var(--mono);font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* ════════ TÉMOIGNAGES ════════ */
+.quotes{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2.6rem}
+.quote{background:var(--stone);padding:34px 28px 30px}
+.quote .mark{font-family:var(--display);font-size:2.6rem;line-height:.7;color:var(--bronze);display:block;margin-bottom:.9rem}
+.quote blockquote{font-family:var(--display);font-size:1.24rem;line-height:1.44}
+.quote p{font-size:.93rem;margin-top:1rem;max-width:46ch}
+.quote cite{display:block;margin-top:1.3rem;font-style:normal;font-family:var(--mono);font-size:.56rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* ════════ DÉPLACEMENTS ════════ */
+.steps{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2.4rem}
+.step{background:var(--paper);padding:30px 26px 34px}
+.step .n{font-family:var(--display);font-size:2.1rem;line-height:1;color:var(--bronze);display:block;margin-bottom:.7rem}
+.step p{font-size:.94rem;max-width:38ch}
+.travel{margin-top:2.4rem;border:1px solid var(--rule);padding:34px 28px;background:var(--snow);
+  display:grid;gap:22px;grid-template-columns:1fr;align-items:start}
+.travel ul{list-style:none;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.travel li{background:var(--snow);padding:14px 16px;font-family:var(--mono);font-size:.58rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);display:flex;justify-content:space-between;gap:14px}
+.travel li b{color:var(--bronze);font-weight:400}
+
+/* ════════ FAQ ════════ */
+.faq{margin-top:2.6rem;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;font-size:1.04rem;transition:color .3s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--bronze)}
+.faq summary .plus{flex:0 0 auto;width:14px;height:14px;position:relative}
+.faq summary .plus::before,.faq summary .plus::after{content:"";position:absolute;background:var(--bronze);transition:transform .3s}
+.faq summary .plus::before{top:6px;left:0;width:14px;height:1px}
+.faq summary .plus::after{left:6px;top:0;width:1px;height:14px}
+.faq details[open] summary .plus::after{transform:scaleY(0)}
+.faq details p{padding:0 0 26px;font-size:.96rem;max-width:64ch}
+
+/* ════════ FORMULAIRE ════════ */
+.enquiry{margin-top:2.6rem;display:grid;gap:20px;grid-template-columns:1fr;max-width:760px}
+.field label{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:transparent;color:var(--ink);border:0;
+  border-bottom:1px solid var(--rule);padding:12px 0;font-family:var(--body);font-size:1rem;font-weight:300;
+  border-radius:0;-webkit-appearance:none;appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--bronze) 50%),linear-gradient(135deg,var(--bronze) 50%,transparent 50%);
+  background-position:calc(100% - 14px) calc(50% + 1px),calc(100% - 8px) calc(50% + 1px);
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:28px}
+.field textarea{resize:vertical;min-height:90px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-bottom-color:var(--bronze)}
+.field input::placeholder,.field textarea::placeholder{color:var(--ink-faint)}
+.send{display:inline-flex;align-items:center;gap:12px;justify-content:center;padding:18px 32px;
+  background:var(--ink);color:var(--paper);border:0;font-family:var(--mono);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .35s}
+.send:hover{background:var(--bronze)}
+.alt-send{font-family:var(--mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-top:12px}
+.alt-send a{border-bottom:1px solid var(--rule)}
+.alt-send a:hover{color:var(--bronze)}
+.contact-list{margin-top:2.6rem;border-top:1px solid var(--rule)}
+.contact-list a{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 0;
+  border-bottom:1px solid var(--rule);transition:padding-left .35s,color .35s}
+.contact-list a:hover{padding-left:12px;color:var(--bronze)}
+.contact-list .lab{font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-faint);display:block;margin-bottom:4px}
+.contact-list .val{font-size:1.06rem}
+.contact-list .ar{color:var(--bronze)}
+.tags{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:1.4rem;list-style:none}
+.tags li{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* ════════ VISIONNEUSE / BARRE ════════ */
+.lightbox{position:fixed;inset:0;z-index:80;display:none;background:rgba(247,245,241,.97);
+  backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:26px}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:86vh;width:auto;height:auto}
+.lightbox .close{position:absolute;top:18px;right:18px;background:transparent;border:1px solid var(--rule);
+  color:var(--ink);width:44px;height:44px;font-size:1.2rem;cursor:pointer;line-height:1}
+.lightbox .close:hover{border-color:var(--bronze);color:var(--bronze)}
+.lb-cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-family:var(--mono);
+  font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+.floatbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:1px;background:var(--rule);
+  transform:translateY(110%);transition:transform .4s ease}
+.floatbar a{flex:1;text-align:center;padding:16px 10px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase}
+.floatbar a.primary{background:var(--ink);color:var(--paper)}
+
+footer{padding:0 0 54px;border-top:1px solid var(--rule)}
+footer .band{height:64px;background:var(--lattice);opacity:.8;margin-bottom:34px}
+footer p{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+
+@media(min-width:760px){
+  .topnav{display:flex} .sticky nav{display:flex} .navbtn{display:block}
+  .hero-grid{grid-template-columns:1fr 0.86fr;gap:56px;align-items:center;padding-top:clamp(30px,4vw,54px)}
+  .hero-grid .headline{padding:0}
+  .proof-grid{grid-template-columns:1fr 1fr;gap:52px}
+  .row{grid-template-columns:290px 1fr;gap:40px;align-items:baseline}
+  .row.numbered{grid-template-columns:100px 230px 1fr;gap:26px}
+  .founder{grid-template-columns:.85fr 1fr;gap:56px}
+  .credentials{grid-template-columns:repeat(3,1fr)}
+  .deliver{grid-template-columns:repeat(3,1fr)}
+  .track .frame{flex:0 0 calc(50% - 6px)}
+  .built{grid-template-columns:repeat(3,1fr)}
+  .built figure.wide{grid-column:span 2;aspect-ratio:auto}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .travel{grid-template-columns:1fr .8fr;gap:48px}
+  .enquiry{grid-template-columns:1fr 1fr}
+  .enquiry .full{grid-column:1 / -1}
+  .contact-list{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+  .floatbar{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+  .plate.sketch,.wipeline,.wipetag{display:none}
+  #curtain{display:none}
+}
+a:focus-visible,.range:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var(--bronze);outline-offset:4px}
+</style>
+</head>
+<body>
+
+<!-- ═════ RIDEAU D'OUVERTURE ═════ -->
+<div id="curtain" aria-hidden="true">
+  <div class="panel top"></div>
+  <div class="panel bot"></div>
+  <div class="mark">
+    <p class="eyebrow">Architecture d'intérieur &amp; 3D</p>
+    <div class="name"><span>Mahnoor Sultan</span></div>
+    <div class="bar"></div>
+  </div>
+</div>
+
+<a class="skip" href="#proof" data-en="Skip to content">Aller au contenu</a>
+
+<div class="sticky" id="sticky">
+  <div class="wrap inner">
+    <a class="name" href="#top">Mahnoor Sultan</a>
+    <nav>
+      <a href="#proof" data-en="Method">Méthode</a>
+      <a href="#services" data-en="Services">Prestations</a>
+      <a href="#work" data-en="Work">Projets</a>
+      <a href="#faq" data-en="FAQ">FAQ</a>
+    </nav>
+    <a class="mini" href="#contact" data-en="Enquire">Contact</a>
+  </div>
+</div>
+
+<!-- ═════ ACCUEIL ═════ -->
+<header class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <div class="slide s1"><img src="images/hero-a.jpg" alt=""></div>
+    <div class="slide s2"><img src="images/hero-b.jpg" alt=""></div>
+    <div class="hero-scrim"></div>
+  </div>
+
+  <div class="topbar">
+    <div class="wrap inner">
+      <div class="brand">Mahnoor Sultan<span data-en="Interior Design Studio">Studio d'architecture d'intérieur</span></div>
+      <div class="topright">
+        <nav class="topnav">
+          <a href="#proof" data-en="Method">Méthode</a>
+          <a href="#services" data-en="Services">Prestations</a>
+          <a href="#work" data-en="Work">Projets</a>
+          <a href="#built" data-en="Delivered">Réalisations</a>
+          <a href="#remote" data-en="Worldwide">International</a>
+          <a href="#contact" data-en="Contact">Contact</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Langue / Language">
+          <button type="button" id="btn-fr" class="on">FR</button>
+          <button type="button" id="btn-en">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-copy">
+    <div class="wrap">
+      <p class="mono rise r1" data-en="Interior Design &amp; Photorealistic 3D">Architecture d'intérieur &amp; 3D photoréaliste</p>
+      <h1 class="rise r2" data-en="See your villa&lt;br&gt;&lt;em&gt;before it exists.&lt;/em&gt;">Voyez votre villa<br><em>avant qu'elle existe.</em></h1>
+      <p class="lede rise r3" data-en="Majlis, villas and penthouses designed in full 3D — marble, brass, silk and daylight resolved before a single wall is touched.">Villas, majlis et penthouses conçus intégralement en 3D — marbre, laiton, soie et lumière du jour arrêtés avant le premier coup de pioche.</p>
+      <ul class="markets rise r4"><li>Lyon</li><li>Paris</li><li>Doha</li><li>Dubaï</li><li>Riyad</li><li>Lahore</li><li>Islamabad</li></ul>
+      <a class="cta rise r5" id="cta-hero" href="https://wa.me/33650081275?text=Bonjour%2C%20je%20souhaite%20une%20visualisation%203D%20pour%20mon%20projet." data-en="Request a consultation → WhatsApp">Demander une étude → WhatsApp</a>
+      <div class="hero-cap" aria-hidden="true">
+        <span class="c1" data-en="Guest bathroom · Islamabad">Salle de bain · Islamabad</span>
+        <span class="c2" data-en="Media wall · Islamabad">Mur TV · Islamabad</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═════ COMPARATEUR ═════ -->
+<section id="proof">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="How it is made">Comment c'est fabriqué</p>
+      <h2 data-en="Modelled first,&lt;br&gt;then built">Modélisé d'abord,<br>construit ensuite</h2>
+    </div>
+    <div class="proof-grid reveal">
+      <div class="compare">
+        <div class="layer after">
+          <!-- IMAGE ▸ COMPARATEUR RENDU -->
+          <img src="images/cmp-sal-render.jpg" alt="Rendu photoréaliste d'un mur TV" width="950" height="1425" loading="lazy">
+        </div>
+        <div class="layer before">
+          <!-- IMAGE ▸ COMPARATEUR SKETCHUP -->
+          <img src="images/cmp-sal-sketch.jpg" alt="Modèle SketchUp du même mur TV" width="950" height="1425" loading="lazy">
+        </div>
+        <input class="range" type="range" min="0" max="100" value="52" aria-label="Comparer le modèle et le rendu">
+        <div class="handle" aria-hidden="true"></div>
+        <span class="tag l" data-en="SketchUp">Modèle</span>
+        <span class="tag r" data-en="Render">Rendu</span>
+      </div>
+      <div class="proof-copy">
+        <p class="lead" data-en="Every room is built in SketchUp first, then rendered with real materials and calculated light.">Chaque pièce est d'abord construite sous SketchUp, puis rendue avec ses vraies matières et une lumière calculée.</p>
+        <p style="margin-top:1.1rem" data-en="Drag the handle across. On the left is the working model — geometry, dimensions, sightlines. On the right is what the client approved, and what the contractors were given to build.">Faites glisser le curseur. À gauche, le modèle de travail : géométrie, cotes, lignes de fuite. À droite, ce que le client a validé et ce que les artisans ont reçu pour exécuter.</p>
+        <p style="margin-top:1.1rem" data-en="The television, the console, the fluted timber, the light slots — every element sits at the exact millimetre it was modelled at.">L'écran, la console, les tasseaux, les saignées lumineuses : chaque élément se trouve au millimètre près là où il a été modélisé.</p>
+        <p class="hint"><i></i><span data-en="Drag to compare">Glissez pour comparer</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ STUDIO ═════ -->
+<section id="studio">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="The studio">Le studio</p>
+      <h2 data-en="One designer,&lt;br&gt;start to finish">Une seule créatrice,<br>du début à la fin</h2>
+    </div>
+    <div class="founder reveal">
+      <div class="portrait">
+        <!-- IMAGE ▸ PORTRAIT -->
+        <img src="images/portrait.jpg" alt="Mahnoor Sultan, architecte d'intérieur" width="900" height="1125" loading="lazy">
+      </div>
+      <div>
+        <p class="lead" data-en="You will not be passed to a junior. From the first call to the final styling, the person who models your space is the person who designs it.">Vous ne serez jamais transmis à un assistant. Du premier échange à la mise en scène finale, celle qui modélise votre espace est celle qui le conçoit.</p>
+        <p style="margin-top:1.2rem" data-en="Trained in France and working across the Gulf and South Asia, I build every project in 3D before anything is committed. It is slower at the start and far faster afterwards — decisions are made on images, not on imagination, and contractors build from drawings that already exist.">Formée en France et intervenant dans le Golfe et en Asie du Sud, je construis chaque projet en 3D avant le moindre engagement. C'est plus lent au départ, bien plus rapide ensuite : les décisions se prennent sur images et non sur l'imagination, et les artisans exécutent des plans qui existent déjà.</p>
+        <p style="margin-top:1.2rem" data-en="Projects are taken on in small numbers, so each one keeps full attention until handover — including flying out to the site when the project deserves it.">Je prends peu de projets à la fois, pour que chacun garde toute mon attention jusqu'à la livraison — y compris en me déplaçant sur site quand le chantier le mérite.</p>
+        <p class="signature">Mahnoor Sultan</p>
+        <div class="credentials">
+          <div><span class="k" data-en="Founded">Studio</span><span class="v" data-en="Studio est. 2024">Créé en 2024</span></div>
+          <div><span class="k" data-en="Software">Logiciels</span><span class="v">SketchUp · V-Ray · AutoCAD</span></div>
+          <div><span class="k" data-en="Languages">Langues</span><span class="v">FR · EN · UR · PA</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ MÉTHODE ═════ -->
+<section id="process">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="The process">La méthode</p>
+      <h2 data-en="From survey to render,&lt;br&gt;then to reality">Du relevé au rendu,<br>puis au réel</h2>
+      <p class="lead" data-en="Nothing is decided blind. At every stage you approve an image of exactly what will be built.">Rien ne se décide à l'aveugle. À chaque étape, vous validez l'image exacte de ce qui sera construit.</p>
+    </div>
+    <div class="rows reveal">
+      <div class="row numbered"><span class="idx" data-en="Stage 01">Étape 01</span><h3 data-en="Brief &amp; survey">Brief &amp; relevé</h3>
+        <p data-en="Dimensions, orientation, structural constraints. Most importantly, how the household actually uses each room — formal reception, family living, hosting.">Cotes, orientation, contraintes structurelles. Et surtout : comment la maison vit réellement chaque pièce — réception, vie de famille, accueil des invités.</p></div>
+      <div class="row numbered"><span class="idx" data-en="Stage 02">Étape 02</span><h3 data-en="SketchUp modelling">Modélisation SketchUp</h3>
+        <p data-en="The property is rebuilt in 3D to the centimetre. Layouts are tested, partitions moved, sightlines and daylight studied — all before anything is ordered.">Le logement est reconstruit en 3D au centimètre. On teste les implantations, on déplace les cloisons, on étudie les vues et la lumière — avant la moindre commande.</p></div>
+      <div class="row numbered"><span class="idx" data-en="Stage 03">Étape 03</span><h3 data-en="Photorealistic rendering">Rendu photoréaliste</h3>
+        <p data-en="Marble, brass, timber, silk and gypsum rendered with calculated daylight and evening lighting. You receive images indistinguishable from photography.">Marbre, laiton, bois, soie et staff rendus avec la lumière du jour et l'éclairage du soir calculés. Vous recevez des images qu'on ne distingue pas d'une photographie.</p></div>
+      <div class="row numbered"><span class="idx" data-en="Stage 04">Étape 04</span><h3 data-en="Specification &amp; delivery">Dossier &amp; livraison</h3>
+        <p data-en="A full schedule of finishes, suppliers and costs. Contractors work to the render — which is why the finished room matches it.">Nomenclature complète des finitions, des fournisseurs et des coûts. Les artisans exécutent d'après le rendu — c'est pourquoi la pièce livrée lui ressemble.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ PRESTATIONS ═════ -->
+<section id="services">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Services">Prestations</p>
+      <h2 data-en="What the studio delivers">Ce que le studio livre</h2>
+    </div>
+    <div class="rows reveal">
+      <div class="row"><div class="head"><span class="idx">01</span><h3 data-en="Majlis &amp; formal reception">Majlis &amp; pièces de réception</h3></div>
+        <p data-en="Rooms designed for hosting: proportion, seating rhythm, lighting layers and materials that hold up to daily guests.">Des pièces pensées pour recevoir : proportions, rythme des assises, strates d'éclairage et matières qui tiennent au passage quotidien.</p></div>
+      <div class="row"><div class="head"><span class="idx">02</span><h3 data-en="Villa &amp; penthouse interiors">Villas &amp; penthouses</h3></div>
+        <p data-en="Whole-property schemes — entrance, living, dining, bedrooms, dressing and bathrooms — resolved as one coherent language.">Projet complet — entrée, séjour, salle à manger, chambres, dressings, salles d'eau — traité comme un langage cohérent.</p></div>
+      <div class="row"><div class="head"><span class="idx">03</span><h3 data-en="3D visualisation for developers">Visualisation 3D pour promoteurs</h3></div>
+        <p data-en="Render packs for off-plan sales, brochures and listings. Sell the unit before the concrete cures.">Séries de rendus pour la vente sur plan, les brochures et les annonces. Vendre le lot avant que le béton ait pris.</p></div>
+      <div class="row"><div class="head"><span class="idx">04</span><h3 data-en="Hospitality &amp; retail">Hôtellerie &amp; commerce</h3></div>
+        <p data-en="Restaurants, showrooms, clinics and boutiques — concept, layout and renders ready for landlord or investor approval.">Restaurants, showrooms, cabinets et boutiques — concept, plan et rendus prêts pour le bailleur ou l'investisseur.</p></div>
+      <div class="row"><div class="head"><span class="idx">05</span><h3 data-en="Turnkey delivery">Clé en main</h3></div>
+        <p data-en="Procurement, contractor coordination and final styling. One point of contact from first sketch to handover.">Approvisionnement, coordination des artisans et mise en scène finale. Un seul interlocuteur du premier croquis à la remise des clés.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ NIVEAUX ═════ -->
+<section id="deliverables" class="tinted">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Engagement levels">Niveaux d'intervention</p>
+      <h2 data-en="Three ways to&lt;br&gt;work together">Trois façons de<br>travailler ensemble</h2>
+      <p data-en="Fees are quoted per project, based on floor area and the number of rooms. Every proposal names a fixed price and a delivery date before anything begins.">Les honoraires sont établis par projet, selon la surface et le nombre de pièces. Chaque proposition indique un prix ferme et une date de livraison avant tout démarrage.</p>
+    </div>
+    <div class="deliver reveal">
+      <div class="col"><span class="kind" data-en="Level 01">Niveau 01</span><h3 data-en="Visualisation">Visualisation</h3>
+        <p class="note" data-en="You already have a design or a layout. You need it seen.">Vous avez déjà un projet ou un plan. Il vous faut le voir.</p>
+        <ul>
+          <li data-en="3D model built from your plans">Modèle 3D construit d'après vos plans</li>
+          <li data-en="3 to 5 high-resolution renders">3 à 5 rendus haute définition</li>
+          <li data-en="Day and evening lighting versions">Versions lumière du jour et lumière du soir</li>
+          <li data-en="One round of revisions">Une série de retouches</li>
+          <li data-en="Delivery in 7 to 12 days">Livraison en 7 à 12 jours</li>
+        </ul></div>
+      <div class="col"><span class="kind" data-en="Level 02">Niveau 02</span><h3 data-en="Full design">Conception complète</h3>
+        <p class="note" data-en="The complete scheme, ready for any contractor to price and build.">Le projet entier, prêt à être chiffré et exécuté par n'importe quelle entreprise.</p>
+        <ul>
+          <li data-en="Layout study and space planning">Étude d'implantation et plan d'aménagement</li>
+          <li data-en="Material and finish direction">Direction des matières et des finitions</li>
+          <li data-en="6 to 12 renders across the property">6 à 12 rendus sur l'ensemble du logement</li>
+          <li data-en="Furniture and lighting schedule with references">Nomenclature mobilier et luminaires avec références</li>
+          <li data-en="Technical drawings for the site team">Plans techniques pour les équipes de chantier</li>
+          <li data-en="Two rounds of revisions">Deux séries de retouches</li>
+        </ul></div>
+      <div class="col"><span class="kind" data-en="Level 03">Niveau 03</span><h3 data-en="Turnkey">Clé en main</h3>
+        <p class="note" data-en="Everything above, plus the execution. You receive finished rooms.">Tout ce qui précède, plus l'exécution. Vous recevez des pièces terminées.</p>
+        <ul>
+          <li data-en="Contractor sourcing and tender review">Recherche d'entreprises et analyse des devis</li>
+          <li data-en="Procurement and order tracking">Achats et suivi des commandes</li>
+          <li data-en="Site visits at agreed milestones">Visites de chantier aux étapes convenues</li>
+          <li data-en="Final styling before handover">Mise en scène finale avant remise</li>
+          <li data-en="Single point of contact throughout">Un interlocuteur unique du début à la fin</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ PROJETS ═════ -->
+<section id="work">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Selected work">Projets</p>
+      <h2 data-en="Recent renders">Rendus récents</h2>
+      <p data-en="Each image below was calculated from a model built to the centimetre, long before anything was ordered.">Chaque image ci-dessous a été calculée à partir d'un modèle construit au centimètre, bien avant la moindre commande.</p>
+    </div>
+    <div class="carousel reveal">
+      <button class="navbtn prev" id="cprev" type="button" aria-label="Projet précédent">‹</button>
+      <div class="track" id="track">
+        <figure class="frame">
+          <!-- IMAGE ▸ PROJET 1 -->
+          <img src="images/cmp-sdb-render.jpg" alt="Rendu de salle de bain, Islamabad" loading="lazy">
+          <figcaption class="cap" data-en="Guest bathroom · Islamabad">Salle de bain · Islamabad</figcaption>
+        </figure>
+        <figure class="frame">
+          <!-- IMAGE ▸ PROJET 2 -->
+          <img src="images/cmp-sal-render.jpg" alt="Rendu de mur TV de séjour" loading="lazy">
+          <figcaption class="cap" data-en="Media wall · Double-height living room">Mur TV · Séjour double hauteur</figcaption>
+        </figure>
+      </div>
+      <button class="navbtn next" id="cnext" type="button" aria-label="Projet suivant">›</button>
+      <div class="dots" id="cdots"></div>
+      <p class="hint" style="justify-content:center"><i></i><span data-en="Swipe or use the arrows">Glissez ou utilisez les flèches</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ RÉALISATION LIVRÉE — MÂCON ═════ -->
+<section id="built" class="tinted">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Delivered project">Réalisation livrée</p>
+      <h2 data-en="Not a render.&lt;br&gt;A finished home.">Ce ne sont pas des rendus.<br>C'est le chantier livré.</h2>
+      <p data-en="A converted farmhouse near Mâcon, in Burgundy. Photographed after handover — exposed beams kept, a teal wall to anchor the volume, rattan and warm oak throughout.">Une ferme réhabilitée près de Mâcon, en Bourgogne. Photographiée après la remise des clés : charpente conservée, mur bleu-vert pour ancrer le volume, rotin et chêne clair d'un bout à l'autre.</p>
+    </div>
+    <div class="built reveal">
+      <figure class="wide">
+        <img src="images/macon-1.jpg" alt="Séjour ouvert sur cuisine, Mâcon" loading="lazy">
+        <figcaption data-en="Living room · Mâcon">Séjour · Mâcon</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macon-2.jpg" alt="Séjour sous charpente apparente" loading="lazy">
+        <figcaption data-en="Exposed roof structure">Charpente apparente</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macon-3.jpg" alt="Coin repas et suspension en rotin" loading="lazy">
+        <figcaption data-en="Dining corner">Coin repas</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macon-4.jpg" alt="Bibliothèque et mur bleu-vert" loading="lazy">
+        <figcaption data-en="Shelving &amp; accent wall">Bibliothèque &amp; mur d'accent</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macon-5.jpg" alt="Chambre, textile velours vert" loading="lazy">
+        <figcaption data-en="Bedroom · Velvet detail">Chambre · Velours</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macon-6.jpg" alt="Fauteuil moutarde et bout de canapé" loading="lazy">
+        <figcaption data-en="Reading corner">Coin lecture</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ COMPARATEUR 2 — SALLE DE BAIN ═════ -->
+<section id="proof2">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Second example">Deuxième exemple</p>
+      <h2 data-en="The same room,&lt;br&gt;drawn and delivered">La même pièce,<br>dessinée puis livrée</h2>
+    </div>
+    <div class="proof-grid reveal">
+      <div class="compare tall">
+        <div class="layer after">
+          <img src="images/cmp-sdb-render.jpg" alt="Rendu photoréaliste de la salle de bain" loading="lazy">
+        </div>
+        <div class="layer before">
+          <img src="images/cmp-sdb-sketch.jpg" alt="Modèle SketchUp de la salle de bain" loading="lazy">
+        </div>
+        <input class="range" type="range" min="0" max="100" value="48" aria-label="Comparer le modèle et le rendu">
+        <div class="handle" aria-hidden="true"></div>
+        <span class="tag l" data-en="SketchUp">Modèle</span>
+        <span class="tag r" data-en="Render">Rendu</span>
+      </div>
+      <div class="proof-copy">
+        <p class="lead" data-en="Travertine, veined marble, backlit mirror, walk-in shower — all decided in the model before a single tile was ordered.">Travertin, marbre veiné, miroir rétroéclairé, douche à l'italienne : tout a été arrêté dans la maquette avant la moindre commande de carrelage.</p>
+        <p style="margin-top:1.1rem" data-en="The niche heights, the mirror diameter, the exact position of the light strip behind it — none of it was improvised on site.">La hauteur des niches, le diamètre du miroir, la position exacte du bandeau lumineux derrière lui : rien n'a été improvisé sur le chantier.</p>
+        <p class="hint"><i></i><span data-en="Drag to compare">Glissez pour comparer</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ TÉMOIGNAGES ═════ -->
+<section id="clients" class="tinted">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="In their words">Ils en parlent</p>
+      <h2 data-en="What clients say">Ce que disent les clients</h2>
+      <p data-en="Replace these three with real quotes as soon as you have them — first name, city and project type are enough.">À remplacer par de vrais avis dès que possible — un prénom, une ville et un type de projet suffisent.</p>
+    </div>
+    <div class="quotes reveal">
+      <div class="quote"><span class="mark">“</span>
+        <blockquote data-en="We approved the whole villa from renders, sitting in another country.">Nous avons validé toute la villa sur les rendus, depuis un autre pays.</blockquote>
+        <p data-en="Every material was decided before we flew in. When we finally walked through the house, it was the image we had signed off — down to the light fittings.">Toutes les matières étaient arrêtées avant notre arrivée. En entrant enfin dans la maison, nous avons retrouvé l'image que nous avions signée, jusqu'aux luminaires.</p>
+        <cite data-en="— Client, Villa · Doha">— Client, villa · Doha</cite></div>
+      <div class="quote"><span class="mark">“</span>
+        <blockquote data-en="The 3D sold four units before the building was finished.">La 3D a vendu quatre lots avant la fin du chantier.</blockquote>
+        <p data-en="We used the render pack for the brochure and the sales office. Buyers could picture themselves in the apartment months ahead of handover.">Nous avons utilisé les rendus pour la brochure et le bureau de vente. Les acquéreurs se projetaient dans l'appartement des mois avant la livraison.</p>
+        <cite data-en="— Developer, Off-plan · Dubai">— Promoteur, vente sur plan · Dubaï</cite></div>
+      <div class="quote"><span class="mark">“</span>
+        <blockquote data-en="She changed the layout three times in the model. It cost us nothing.">Elle a changé le plan trois fois dans la maquette. Cela ne nous a rien coûté.</blockquote>
+        <p data-en="Moving a wall on screen takes an afternoon. Moving it on site would have taken a week and a new budget. That alone paid for the design fee.">Déplacer un mur à l'écran prend une après-midi. Le déplacer sur le chantier aurait pris une semaine et un nouveau budget. Rien que ça a payé les honoraires.</p>
+        <cite data-en="— Client, Renovation · Lahore">— Client, rénovation · Lahore</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ INTERNATIONAL ═════ -->
+<section id="remote">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Remote or on site">À distance ou sur place</p>
+      <h2 data-en="Wherever the&lt;br&gt;project is">Où que soit<br>le projet</h2>
+      <p class="lead" data-en="Most projects run entirely online — send the floor plan and a few photographs, and the first visuals follow within days. When a project calls for it, I travel to the site.">La plupart des projets se mènent entièrement en ligne : envoyez le plan et quelques photos, les premières images suivent en quelques jours. Quand le projet l'exige, je me déplace sur site.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="n">1</span><h3 data-en="Send your plans">Envoyez vos plans</h3><p data-en="Architect drawings, a rough sketch with dimensions, or a short walkthrough video on WhatsApp.">Plans d'architecte, croquis coté à main levée, ou une courte vidéo des lieux sur WhatsApp.</p></div>
+      <div class="step"><span class="n">2</span><h3 data-en="Concept call or visit">Rendez-vous ou visite</h3><p data-en="A 45-minute video call to agree the brief, the mood and the budget — or a survey in person if you prefer.">45 minutes en visio pour caler le brief, l'ambiance et le budget — ou un relevé sur place si vous préférez.</p></div>
+      <div class="step"><span class="n">3</span><h3 data-en="Model &amp; render">Maquette &amp; rendus</h3><p data-en="3D model, then a first set of renders for review. Two rounds of revisions are included.">Modèle 3D, puis une première série de rendus à valider. Deux séries de retouches incluses.</p></div>
+      <div class="step"><span class="n">4</span><h3 data-en="Delivery pack">Dossier de livraison</h3><p data-en="High-resolution images, layout drawings and a full finishes schedule your contractor can build from.">Images haute définition, plans d'aménagement et nomenclature complète des finitions, exploitables par votre entreprise.</p></div>
+    </div>
+    <div class="travel reveal">
+      <div class="lede">
+        <p class="mono" data-en="Site visits">Déplacements</p>
+        <h3 style="margin:.6rem 0" data-en="I come to you">Je viens à vous</h3>
+        <p data-en="For larger residences, developments and hospitality projects, I travel to survey the space, meet contractors and select materials with you locally — then again before handover to supervise the final styling.">Pour les grandes résidences, les programmes immobiliers et les projets hôteliers, je me déplace pour relever les lieux, rencontrer les entreprises et choisir les matières avec vous sur place — puis à nouveau avant la livraison pour superviser la mise en scène.</p>
+        <p style="margin-top:1rem" data-en="Travel is quoted transparently at the proposal stage, and folded into the fee on full-property and turnkey projects.">Les déplacements sont chiffrés en toute transparence au moment du devis, et intégrés aux honoraires sur les projets complets et clé en main.</p>
+      </div>
+      <ul>
+        <li><span data-en="France — Lyon &amp; Paris">France — Lyon &amp; Paris</span><b data-en="Based here">Sur place</b></li>
+        <li><span>Qatar</span><b data-en="On request">Sur demande</b></li>
+        <li><span data-en="UAE">Émirats</span><b data-en="On request">Sur demande</b></li>
+        <li><span data-en="Saudi Arabia">Arabie saoudite</span><b data-en="On request">Sur demande</b></li>
+        <li><span>Pakistan</span><b data-en="On request">Sur demande</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ FAQ ═════ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Before you write">Avant de m'écrire</p>
+      <h2 data-en="Questions I am&lt;br&gt;asked most">Les questions qui<br>reviennent le plus</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary><span data-en="Can you work on a property you have never seen?">Pouvez-vous travailler sur un bien que vous n'avez jamais vu ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="Yes — most international projects begin that way. I need the floor plan with dimensions, photographs of each wall, and the ceiling height. A short video walking through the space on your phone is often enough to fill the gaps. If anything is unclear, I ask for one specific measurement rather than guessing.">Oui, la plupart des projets internationaux commencent ainsi. Il me faut le plan coté, une photo de chaque mur et la hauteur sous plafond. Une courte vidéo prise au téléphone en traversant les pièces comble généralement le reste. En cas de doute, je demande une mesure précise plutôt que de supposer.</p></details>
+      <details><summary><span data-en="How long does it take?">Combien de temps cela prend-il ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="A single room rendered from existing plans takes 7 to 12 days. A full villa scheme with drawings and schedules takes 4 to 8 weeks depending on size. Turnkey projects follow the construction programme. Every proposal carries a dated timeline, not an estimate.">Une pièce rendue d'après des plans existants demande 7 à 12 jours. Un projet de villa complet avec plans et nomenclatures prend 4 à 8 semaines selon la surface. Le clé en main suit le calendrier de chantier. Chaque proposition porte un planning daté, pas une estimation.</p></details>
+      <details><summary><span data-en="What exactly do I receive at the end?">Que reçoit-on exactement à la fin ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="High-resolution images suitable for print, layout drawings, and a schedule listing every finish, fitting and piece of furniture with its supplier and reference. Your contractor can price and build from that pack without further input.">Des images haute définition exploitables en impression, les plans d'aménagement, et une nomenclature listant chaque finition, équipement et meuble avec son fournisseur et sa référence. Votre entreprise peut chiffrer et exécuter à partir de ce dossier sans rien de plus.</p></details>
+      <details><summary><span data-en="Can my own contractor build it?">Mon propre artisan peut-il exécuter ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="Of course. The drawings are prepared to be handed to any competent site team, local or otherwise. If you would prefer sourcing help, that is the turnkey level of service.">Bien sûr. Les plans sont conçus pour être remis à n'importe quelle équipe compétente, locale ou non. Si vous souhaitez être accompagné dans le choix des entreprises, c'est l'objet de la formule clé en main.</p></details>
+      <details><summary><span data-en="What if I do not like the first renders?">Et si les premiers rendus ne me plaisent pas ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="That is what the revision rounds are for, and it is exactly why the work is done in 3D. Changing a marble, a layout or a lighting scheme in the model costs an afternoon. Changing it on site costs a fortune.">C'est précisément l'objet des séries de retouches, et toute la raison d'être du travail en 3D. Changer un marbre, un plan ou un éclairage dans la maquette coûte une après-midi. Le changer sur le chantier coûte une fortune.</p></details>
+      <details><summary><span data-en="Do you charge for travel?">Les déplacements sont-ils facturés ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="Survey visits are quoted separately and transparently at proposal stage. On full-property and turnkey projects, travel is folded into the overall fee.">Les visites de relevé sont chiffrées séparément et clairement au moment du devis. Sur les projets complets et clé en main, le déplacement est intégré aux honoraires.</p></details>
+      <details><summary><span data-en="Which currency do you invoice in?">Dans quelle devise facturez-vous ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="Euros by default, with QAR, AED, USD and GBP available on request. Payment is normally split across three milestones so nothing is due before work is delivered.">En euros par défaut, avec QAR, AED, USD et GBP possibles sur demande. Le règlement s'échelonne habituellement en trois étapes, de sorte que rien n'est dû avant livraison.</p></details>
+      <details><summary><span data-en="Do you sign a confidentiality agreement?">Signez-vous un accord de confidentialité ?</span><span class="plus" aria-hidden="true"></span></summary>
+        <p data-en="Yes, on request and at no cost. Private residences are never published without written permission, and several projects remain unlisted for that reason.">Oui, sur demande et sans frais. Les résidences privées ne sont jamais publiées sans autorisation écrite, et plusieurs projets restent volontairement absents du site.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ CONTACT ═════ -->
+<section id="contact" class="tinted">
+  <div class="wrap">
+    <div class="reveal narrow">
+      <p class="mono" data-en="Enquiries">Prendre contact</p>
+      <h2 data-en="The first consultation&lt;br&gt;is complimentary">Le premier échange<br>est offert</h2>
+      <p class="lead" data-en="Share the plans and a few photographs of the space. You will have a proposal, a timeline and a fee within 24 hours.">Transmettez les plans et quelques photos du lieu. Vous recevrez une proposition, un planning et un montant sous 24 heures.</p>
+    </div>
+
+    <div class="enquiry reveal">
+      <div class="field"><label for="f-name" data-en="Name">Nom</label>
+        <input id="f-name" type="text" placeholder="Votre nom" data-en-ph="Your name"></div>
+      <div class="field"><label for="f-city" data-en="City">Ville</label>
+        <input id="f-city" type="text" placeholder="Doha, Dubaï, Lahore…" data-en-ph="Doha, Dubai, Lahore…"></div>
+      <div class="field"><label for="f-type" data-en="Project type">Type de projet</label>
+        <select id="f-type">
+          <option data-en="Villa — private residence">Villa — résidence privée</option>
+          <option data-en="Apartment or penthouse">Appartement ou penthouse</option>
+          <option data-en="Majlis or reception room">Majlis ou pièce de réception</option>
+          <option data-en="Single room refresh">Une seule pièce à reprendre</option>
+          <option data-en="Off-plan development — render pack">Programme immobilier — série de rendus</option>
+          <option data-en="Hotel or hospitality">Hôtellerie</option>
+          <option data-en="Restaurant, café or F&amp;B">Restaurant, café ou F&amp;B</option>
+          <option data-en="Retail or showroom">Commerce ou showroom</option>
+          <option data-en="Office or clinic">Bureau ou cabinet</option>
+          <option data-en="Other">Autre</option>
+        </select></div>
+      <div class="field"><label for="f-stage" data-en="Stage">Avancement</label>
+        <select id="f-stage">
+          <option data-en="Still at the idea stage">Encore au stade de l'idée</option>
+          <option data-en="Plans ready, not started">Plans prêts, travaux non commencés</option>
+          <option data-en="Under construction">Chantier en cours</option>
+          <option data-en="Existing space to renovate">Lieu existant à rénover</option>
+        </select></div>
+      <div class="field full"><label for="f-msg" data-en="Tell me about the space">Parlez-moi du lieu</label>
+        <textarea id="f-msg" placeholder="Surface approximative, nombre de pièces, ce que vous souhaitez changer…" data-en-ph="Approximate size, number of rooms, what you would like to change…"></textarea></div>
+      <div class="full">
+        <button class="send" id="f-send" type="button" data-en="Send via WhatsApp →">Envoyer via WhatsApp →</button>
+        <p class="alt-send"><span data-en="Prefer email?">Vous préférez l'email ?</span> <a href="mailto:studio@example.com?subject=Demande%20de%20projet">studio@example.com</a></p>
+      </div>
+    </div>
+
+    <div class="contact-list reveal">
+      <a id="wa-1" href="https://wa.me/33650081275?text=Bonjour%2C%20je%20souhaite%20une%20visualisation%203D%20pour%20mon%20projet." target="_blank" rel="noopener">
+        <span><span class="lab" data-en="WhatsApp — fastest">WhatsApp — le plus rapide</span><span class="val" data-en="Start a conversation">Démarrer une conversation</span></span><span class="ar">→</span></a>
+      <a href="tel:+33650081275">
+        <span><span class="lab" data-en="Telephone">Téléphone</span><span class="val">+33 6 50 08 12 75</span></span><span class="ar">→</span></a>
+      <a href="mailto:studio@example.com?subject=Demande%20de%20projet">
+        <span><span class="lab">Email</span><span class="val">studio@example.com</span></span><span class="ar">→</span></a>
+      <a href="https://instagram.com/mahnoor.interiors" target="_blank" rel="noopener">
+        <span><span class="lab">Instagram</span><span class="val">@mahnoor.interiors</span></span><span class="ar">→</span></a>
+    </div>
+
+    <div class="reveal" style="margin-top:2.8rem">
+      <p class="mono" data-en="Languages">Langues parlées</p>
+      <ul class="tags"><li>Français</li><li>English</li><li>Urdu</li><li>Punjabi</li></ul>
+      <p class="mono" style="margin-top:1.8rem" data-en="Projects delivered in">Projets livrés en</p>
+      <ul class="tags"><li>France</li><li>Qatar</li><li><span data-en="UAE">Émirats</span></li><li><span data-en="Saudi Arabia">Arabie saoudite</span></li><li>Pakistan</li></ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="band" aria-hidden="true"></div>
+  <div class="wrap"><p data-en="Mahnoor Sultan — Interior Design &amp; Photorealistic 3D">Mahnoor Sultan — Architecture d'intérieur &amp; 3D photoréaliste</p></div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+  <button class="close" id="lb-close" type="button" aria-label="Fermer">✕</button>
+  <div id="lb-slot"></div>
+  <p class="lb-cap" id="lb-cap"></p>
+</div>
+
+<div class="floatbar" id="floatbar">
+  <a href="tel:+33650081275" data-en="Call">Appeler</a>
+  <a class="primary" id="wa-2" href="https://wa.me/33650081275?text=Bonjour%2C%20je%20souhaite%20une%20visualisation%203D%20pour%20mon%20projet.">WhatsApp →</a>
+</div>
+
+<script>
+(function(){
+  var WHATSAPP = '33650081275';   // ← numéro, format international sans +
+  var lang = 'fr';
+
+  /* ── messages WhatsApp par langue ── */
+  var WA = {
+    fr:'Bonjour, je souhaite une visualisation 3D pour mon projet.',
+    en:"Hello, I'd like a 3D visualisation for my project."
+  };
+  function waLink(){ return 'https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(WA[lang]); }
+  function refreshWa(){
+    ['cta-hero','wa-1','wa-2'].forEach(function(id){
+      var el=document.getElementById(id); if(el) el.href=waLink();
+    });
+  }
+
+  /* ── bascule de langue ── */
+  var nodes = document.querySelectorAll('[data-en]');
+  nodes.forEach(function(el){ el.dataset.fr = el.innerHTML; });
+  var phs = document.querySelectorAll('[data-en-ph]');
+  phs.forEach(function(el){ el.dataset.frPh = el.placeholder; });
+
+  function setLang(next){
+    lang = next;
+    document.documentElement.lang = next;
+    nodes.forEach(function(el){ el.innerHTML = next === 'en' ? el.dataset.en : el.dataset.fr; });
+    phs.forEach(function(el){ el.placeholder = next === 'en' ? el.dataset.enPh : el.dataset.frPh; });
+    document.getElementById('btn-fr').classList.toggle('on', next === 'fr');
+    document.getElementById('btn-en').classList.toggle('on', next === 'en');
+    refreshWa();
+  }
+  document.getElementById('btn-fr').addEventListener('click', function(){ setLang('fr'); });
+  document.getElementById('btn-en').addEventListener('click', function(){ setLang('en'); });
+  refreshWa();
+  if ((navigator.language || '').slice(0,2) !== 'fr') setLang('en');
+
+  /* ── rideau d'ouverture ── */
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ document.body.style.overflow = ''; }, 1500);
+  }
+
+  /* ── nettoyage du rideau + filet de sécurité ── */
+  setTimeout(function(){
+    var c = document.getElementById('curtain');
+    if (c && c.parentNode) c.parentNode.removeChild(c);
+    document.body.style.overflow = '';
+  }, 2800);
+  setTimeout(function(){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('seen'); });
+  }, 4000);
+
+  /* ── comparateur ── */
+  document.querySelectorAll('.compare').forEach(function(box){
+    var input = box.querySelector('.range');
+    if (!input) return;
+    function draw(){ box.style.setProperty('--pos', input.value + '%'); }
+    input.addEventListener('input', draw);
+    draw();
+  });
+
+  /* ── apparitions au défilement ── */
+  var targets = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(e){
+      e.forEach(function(x){ if (x.isIntersecting){ x.target.classList.add('seen'); obs.unobserve(x.target); } });
+    }, { threshold: 0.1 });
+    targets.forEach(function(t){ obs.observe(t); });
+  } else { targets.forEach(function(t){ t.classList.add('seen'); }); }
+
+  /* ── formulaire → message WhatsApp prérempli ── */
+  document.getElementById('f-send').addEventListener('click', function(){
+    function v(id){ var e=document.getElementById(id); return e ? e.value.trim() : ''; }
+    var L = lang === 'en'
+      ? { intro: WA.en, name:'Name', city:'City', proj:'Project', stage:'Stage' }
+      : { intro: WA.fr, name:'Nom',  city:'Ville', proj:'Projet', stage:'Avancement' };
+    var lines = [L.intro, '',
+      L.name  + ' : ' + (v('f-name') || '—'),
+      L.city  + ' : ' + (v('f-city') || '—'),
+      L.proj  + ' : ' + v('f-type'),
+      L.stage + ' : ' + v('f-stage')];
+    if (v('f-msg')) lines.push('', v('f-msg'));
+    window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(lines.join('\n')), '_blank');
+  });
+
+  /* ── en-tête collant + barre mobile ── */
+  var bar = document.getElementById('floatbar');
+  var sticky = document.getElementById('sticky');
+  var hero = document.querySelector('.hero');
+  if (hero && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(e){
+      var past = !e[0].isIntersecting;
+      bar.classList.toggle('on', past);
+      sticky.classList.toggle('on', past);
+    }, { threshold: 0 }).observe(hero);
+  }
+
+  /* ── carrousel ── */
+  var track = document.getElementById('track');
+  if (track) {
+    var slides = track.querySelectorAll('.frame');
+    var dots = document.getElementById('cdots');
+    function step(){ return slides[0].getBoundingClientRect().width + 12; }
+    slides.forEach(function(_, i){
+      var d = document.createElement('button');
+      d.className = 'dot' + (i === 0 ? ' on' : ''); d.type = 'button';
+      d.setAttribute('aria-label', 'Projet ' + (i + 1));
+      d.addEventListener('click', function(){ track.scrollTo({ left: i * step(), behavior: 'smooth' }); });
+      dots.appendChild(d);
+    });
+    document.getElementById('cprev').addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    document.getElementById('cnext').addEventListener('click', function(){ track.scrollBy({ left:  step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', function(){
+      var i = Math.round(track.scrollLeft / step());
+      dots.querySelectorAll('.dot').forEach(function(d, k){ d.classList.toggle('on', k === i); });
+    }, { passive: true });
+  }
+
+  /* ── visionneuse ── */
+  var lb = document.getElementById('lightbox');
+  var slot = document.getElementById('lb-slot');
+  var cap  = document.getElementById('lb-cap');
+  function closeLb(){ lb.classList.remove('on'); slot.innerHTML=''; document.body.style.overflow=''; }
+  document.querySelectorAll('.frame, .built figure').forEach(function(fr){
+    fr.addEventListener('click', function(){
+      var pic = fr.querySelector('img'); if (!pic) return;
+      slot.innerHTML=''; slot.appendChild(pic.cloneNode(true));
+      var c = fr.querySelector('.cap') || fr.querySelector('figcaption'); cap.textContent = c ? c.textContent : '';
+      lb.classList.add('on'); document.body.style.overflow='hidden';
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('on')) closeLb(); });
+
+  /* ── FAQ : une seule réponse ouverte ── */
+  var items = document.querySelectorAll('.faq details');
+  items.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (d.open) items.forEach(function(o){ if (o !== d) o.open = false; });
+    });
+  });
+})();
+</script>
+</body>
+</html>
